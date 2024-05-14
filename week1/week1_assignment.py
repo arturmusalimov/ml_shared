@@ -7,8 +7,13 @@
 #Example: [2,3,4,2,7] target = 10, output = [1,4]
 
 def twoSum(nums, target):
-    #your code goes here
-    pass
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    print(i, j)
+    
+
+twoSum([2,3,6,10], 16)
 
 #Time and space complexity:
 
