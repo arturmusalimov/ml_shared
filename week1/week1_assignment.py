@@ -6,16 +6,28 @@
 #You may assume that each input would have exactly one solution, and you may not use the same element twice.
 #Example: [2,3,4,2,7] target = 10, output = [1,4]
 
-def twoSum(nums, target):
+""" def twoSum(nums, target):
     for i in range(len(nums)):
         for j in range(i + 1, len(nums)):
                 if nums[i] + nums[j] == target:
                     print(i, j)
     
 
-twoSum([2,3,6,10], 16)
+twoSum([2,3,6,10], 16) """
+#Time and space complexity: Time: O(n*n) / Space: I don't know, maybe just the space of the array (nums) -> n?
 
-#Time and space complexity:
+
+""" def twoSumHash(nums, target):
+    global hashmap
+    hashmap = {}
+    for i, n in enumerate(nums):
+        diff = target - n
+        if diff in hashmap:
+            return [hashmap[diff], i]
+        hashmap[n] = i    
+    return
+
+print(twoSumHash([2,3,4,5], 9)) """
 
 #Question 2:
 #Given some arrays with strings on them, find the most common longest prefix among them.
@@ -41,7 +53,7 @@ def threeSum(nums):
 #Given a singly linked list, reverse the nodes of the linked list
 #Example 1: [1, 2, 3] output = [3, 2, 1]
 
-class Node:
+""" class Node:
     def __init__(self, data, next=None):
         self.data = data
         self.next = next
@@ -65,7 +77,7 @@ def reverseList(head):
     #your code goes here
     pass
 
-#Time and space complexity:
+#Time and space complexity: """
 
 
 
