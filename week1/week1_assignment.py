@@ -6,6 +6,8 @@
 #You may assume that each input would have exactly one solution, and you may not use the same element twice.
 #Example: [2,3,4,2,7] target = 10, output = [1,4]
 
+# SOLVED WITH HELP FROM THE VIDEO
+
 """ def twoSum(nums, target):
     for i in range(len(nums)):
         for j in range(i + 1, len(nums)):
@@ -13,8 +15,8 @@
                     print(i, j)
     
 
-twoSum([2,3,6,10], 16) """
-#Time and space complexity: Time: O(n*n) / Space: I don't know, maybe just the space of the array (nums) -> n?
+print(twoSum([2,3,6,10], 16)) """
+#Time and space complexity: Time: O(n*n) / Space: I don't know, maybe just the space of the array (nums) ?
 
 
 """ def twoSumHash(nums, target):
@@ -27,33 +29,44 @@ twoSum([2,3,6,10], 16) """
         hashmap[n] = i    
     return
 
-print(twoSumHash([2,3,4,5], 9)) """
+print(twoSumHash([2,3,6,10], 16)) """
 
 #Question 2:
 #Given some arrays with strings on them, find the most common longest prefix among them.
 #Example: ["flower","flow","flight"] output = "fl"
 
-def findMostCommonPrefix(arr):
-    #your code goes here
-    pass
+""" def findMostCommonPrefix(arr):    
+    for string in arr:
+        for char in string:
+            return """
+            # pseudocode: 
+            # look for the first char in every string, keep the strings with common chars, remove the others
+            # repeat the prcoess with char+1 until no more common chars in strings are left
+            # return all common chars
 
-#Time and space complexity:
+#Time and space complexity: Time maybe n because in worst case I have to go through every string once? Space I don't know how to calculate.
 
 #Question 3:
 #Given an array of integers, return the indices of three numbers that add up to 0.
 #example: [1, 2, -2, -1, 3] output = [0, 2, 3]
 
 def threeSum(nums):
-    #your code goes here
+    # pseudocode:
+    # go through every int in array and check if two other int in array = int2 + int3 == -int1
+    # if yes, return index of all three arrays
+    # if no, go to int+1 and repeat operation
+    # optimizations possible, like saving checked pairs (int2 + int3 == -int1) in a hashmap, to not compare them again
     pass
 
-#Time and space complexity:
+#Time and space complexity: ?
 
 #Question 4:
 #Given a singly linked list, reverse the nodes of the linked list
 #Example 1: [1, 2, 3] output = [3, 2, 1]
 
-""" class Node:
+# Don't know how they works, need to investigate first
+
+class Node:
     def __init__(self, data, next=None):
         self.data = data
         self.next = next
@@ -77,7 +90,7 @@ def reverseList(head):
     #your code goes here
     pass
 
-#Time and space complexity: """
+#Time and space complexity:
 
 
 
