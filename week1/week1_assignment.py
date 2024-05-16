@@ -8,19 +8,18 @@
 
 # SOLVED WITH HELP FROM THE VIDEO
 
-""" def twoSum(nums, target):
+def twoSum(nums, target):
     for i in range(len(nums)):
         for j in range(i + 1, len(nums)):
                 if nums[i] + nums[j] == target:
-                    print(i, j)
-    
+                    return i,j
 
-print(twoSum([2,3,6,10], 16)) """
+print(twoSum([2,3,6,10], 16))
+
 #Time and space complexity: Time: O(n*n) / Space: I don't know, maybe just the space of the array (nums) ?
 
 
 """ def twoSumHash(nums, target):
-    global hashmap
     hashmap = {}
     for i, n in enumerate(nums):
         diff = target - n
@@ -43,6 +42,7 @@ print(twoSumHash([2,3,6,10], 16)) """
             # look for the first char in every string, keep the strings with common chars, remove the others
             # repeat the prcoess with char+1 until no more common chars in strings are left
             # return all common chars
+            
 
 #Time and space complexity: Time maybe n because in worst case I have to go through every string once? Space I don't know how to calculate.
 
@@ -66,7 +66,7 @@ def threeSum(nums):
 
 # Don't know how they works, need to investigate first
 
-class Node:
+""" class Node:
     def __init__(self, data, next=None):
         self.data = data
         self.next = next
@@ -90,7 +90,7 @@ def reverseList(head):
     #your code goes here
     pass
 
-#Time and space complexity:
+#Time and space complexity: """
 
 
 
