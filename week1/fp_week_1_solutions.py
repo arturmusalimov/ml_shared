@@ -6,17 +6,20 @@
 #You may assume that each input would have exactly one solution, and you may not use the same element twice.
 #Example: [2,3,4,2,7] target = 10, output = [1,4]
 
-def twoSum(nums, target):
+""" def twoSum(nums, target):
     #we use a hash map to track on the observed numbers(this will be the keys) and set the index as a value
     res = {}
 
     for x, num in enumerate(nums):
         value = target - num
-        if value in res:
+        if value in res: 
             return [res[value], x]
-        res[num] = x
-
+        res[num] = x  
     return res
+print(twoSum([2,3,4,2,7], 10)) """
+
+
+
 
 #Time and space complexity: Time is O(n), we visit each number 1 time linearly, space is also O(n), since in the worst case we allocate N amount
 #of elements in memory.
@@ -25,7 +28,7 @@ def twoSum(nums, target):
 #Given some arrays with strings on them, find the most common longest prefix among them.
 #Example: ["flower","flow","flight"] output = "fl"
 
-def findMostCommonPrefix(arr):
+""" def findMostCommonPrefix(arr):
 
     smallestWord = getSmallestWord(arr)
     mostCommonSet = set(smallestWord)
@@ -40,7 +43,6 @@ def getSmallestWord(words):
     for word in words[1:]:
         if len(word) < len(smallest):
             smallest = word
-
     return smallest
 
 def findMostCommon(word, mostCommonSet):
@@ -49,7 +51,7 @@ def findMostCommon(word, mostCommonSet):
         if char not in wordSet:
             mostCommonSet.remove(char)
 
-
+print(findMostCommonPrefix(["fdsflower","flow","flight"])) """
 #Time and space complexity: Time O(n.m), where M is the length of the longest word, space is O(m)
 
 #Question 3:
