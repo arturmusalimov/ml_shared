@@ -90,7 +90,7 @@ def threeSum(nums):
 #Given a singly linked list, reverse the nodes of the linked list
 #Example 1: [1, 2, 3] output = [3, 2, 1]
 
-class Node:
+""" class Node:
     def __init__(self, data, next=None):
         self.data = data
         self.next = next
@@ -157,4 +157,4 @@ print("Original List")
 printList(head)
 reversed_head = reverseList(head)
 print("Reversed List")
-printList(reversed_head)
+printList(reversed_head) """
