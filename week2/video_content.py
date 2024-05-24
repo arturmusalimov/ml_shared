@@ -95,6 +95,19 @@ class BinaryTree:
         print(root.value)
         self.printTree(root.left)
         self.printTree(root.right)
+    
+    def countLeafNodes(self, root):
+        if root is None:
+            return 0
+        
+        if root.left is None and root.right is None:
+            return 1
+        
+        leftNodes = self.countLeafNodes(root.left)
+        rightNodes = self.countLeafNodes(root.right)
+        
+        return leftNodes + rightNodes
+    
 
 if __name__ == "__main__":
     tree1 = BinaryTree()
@@ -103,9 +116,12 @@ if __name__ == "__main__":
     root1.left.left = tree1.createNode(12)
     root1.left.right = tree1.createNode(4)
     root1.right = tree1.createNode(6)
-    root1.right.right = tree1.createNode(8)
+    root1.right.left = tree1.createNode(8)
+    # root1.right.right = tree1.createNode(4)
     
-    tree1.printTree(root1)
+    # tree1.printTree(root1)
+    print(tree1.countLeafNodes(root1))
+ 
     
     
         
